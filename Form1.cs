@@ -26,5 +26,15 @@ namespace Notepad_Clone
         {
             Application.Exit();
         }
+
+        private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please reference the Microsoft help center.", "Help", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.Clear();
+        }
     }
 }
