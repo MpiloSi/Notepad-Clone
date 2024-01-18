@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Notepad_Clone
 {
-    public partial class Form1 : Form
+    public partial class MainNotepadForm : Form
     {
-        public Form1()
+        public MainNotepadForm()
         {
             InitializeComponent();
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
