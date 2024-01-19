@@ -42,13 +42,13 @@ namespace Notepad_Clone
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendFeedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.italicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +56,10 @@ namespace Notepad_Clone
             this.strikeThroughToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendFeedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,39 +103,50 @@ namespace Notepad_Clone
             // 
             // newToolStripMenuItem
             // 
+            this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
+            this.openToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Hopstarter_Sleek_Xp_Basic_Folder_Open_256;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_document_save_256;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             // 
             // saveAsToolStripMenuItem
             // 
+            this.saveAsToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Custom_Icon_Design_Pretty_Office_7_Save_as_256;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.saveAsToolStripMenuItem.Text = "Sa&ve As";
             // 
             // printToolStripMenuItem
             // 
+            this.printToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Inipagi_Job_Seeker_Print_512;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.printToolStripMenuItem.Text = "Print";
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Custom_Icon_Design_Flatastic_1_Delete_512;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -140,6 +155,10 @@ namespace Notepad_Clone
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.undoToolStripMenuItem,
             this.redoToolStripMenuItem,
+            this.cutToolStripMenuItem,
+            this.copyToolStripMenuItem,
+            this.pasteToolStripMenuItem,
+            this.deleteToolStripMenuItem,
             this.selectAllToolStripMenuItem,
             this.dateTimeToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
@@ -148,25 +167,57 @@ namespace Notepad_Clone
             // 
             // undoToolStripMenuItem
             // 
+            this.undoToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Icons8_Windows_8_Arrows_Undo_512;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.undoToolStripMenuItem.Text = "Undo";
             // 
             // redoToolStripMenuItem
             // 
+            this.redoToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Icons8_Windows_8_Arrows_Redo_512;
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             this.redoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.redoToolStripMenuItem.Text = "Redo";
             // 
+            // cutToolStripMenuItem
+            // 
+            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+            this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cutToolStripMenuItem.Text = "Cut";
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.copyToolStripMenuItem.Text = "Copy";
+            // 
+            // pasteToolStripMenuItem
+            // 
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pasteToolStripMenuItem.Text = "Paste";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.selectAllToolStripMenuItem.Text = "Select All";
             // 
             // dateTimeToolStripMenuItem
             // 
+            this.dateTimeToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Oxygen_Icons_org_Oxygen_Apps_preferences_system_time_256;
             this.dateTimeToolStripMenuItem.Name = "dateTimeToolStripMenuItem";
+            this.dateTimeToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
             this.dateTimeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dateTimeToolStripMenuItem.Text = "Date/Time";
             // 
@@ -184,6 +235,54 @@ namespace Notepad_Clone
             this.formatToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.formatToolStripMenuItem.Text = "&Font";
             // 
+            // fontDialogToolStripMenuItem
+            // 
+            this.fontDialogToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Delacro_Id_Fonts_256;
+            this.fontDialogToolStripMenuItem.Name = "fontDialogToolStripMenuItem";
+            this.fontDialogToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fontDialogToolStripMenuItem.Text = "Font Dialog";
+            // 
+            // boldToolStripMenuItem
+            // 
+            this.boldToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Icons8_Windows_8_Editing_Bold_512;
+            this.boldToolStripMenuItem.Name = "boldToolStripMenuItem";
+            this.boldToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.boldToolStripMenuItem.Text = "Bold";
+            // 
+            // italicToolStripMenuItem
+            // 
+            this.italicToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Icons8_Windows_8_Editing_Italic_512;
+            this.italicToolStripMenuItem.Name = "italicToolStripMenuItem";
+            this.italicToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.italicToolStripMenuItem.Text = "Italic ";
+            // 
+            // underlineToolStripMenuItem
+            // 
+            this.underlineToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Pictogrammers_Material_Light_Format_underline_512;
+            this.underlineToolStripMenuItem.Name = "underlineToolStripMenuItem";
+            this.underlineToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.underlineToolStripMenuItem.Text = "Underline";
+            // 
+            // strikeThroughToolStripMenuItem
+            // 
+            this.strikeThroughToolStripMenuItem.Name = "strikeThroughToolStripMenuItem";
+            this.strikeThroughToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.strikeThroughToolStripMenuItem.Text = "Strike Through";
+            // 
+            // normalToolStripMenuItem
+            // 
+            this.normalToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Iconoir_Team_Iconoir_Search_font_512;
+            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.normalToolStripMenuItem.Text = "Normal";
+            // 
+            // fontColorToolStripMenuItem
+            // 
+            this.fontColorToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Gartoon_Team_Gartoon_Misc_Stock_Color_512;
+            this.fontColorToolStripMenuItem.Name = "fontColorToolStripMenuItem";
+            this.fontColorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fontColorToolStripMenuItem.Text = "Font color";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -196,6 +295,7 @@ namespace Notepad_Clone
             // 
             // viewHelpToolStripMenuItem
             // 
+            this.viewHelpToolStripMenuItem.Image = global::Notepad_Clone.Properties.Resources.Icojam_Blue_Bits_Information_256;
             this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
             this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewHelpToolStripMenuItem.Text = "View Help";
@@ -212,48 +312,6 @@ namespace Notepad_Clone
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // fontDialogToolStripMenuItem
-            // 
-            this.fontDialogToolStripMenuItem.Name = "fontDialogToolStripMenuItem";
-            this.fontDialogToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.fontDialogToolStripMenuItem.Text = "Font Dialog";
-            // 
-            // boldToolStripMenuItem
-            // 
-            this.boldToolStripMenuItem.Name = "boldToolStripMenuItem";
-            this.boldToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.boldToolStripMenuItem.Text = "Bold";
-            // 
-            // italicToolStripMenuItem
-            // 
-            this.italicToolStripMenuItem.Name = "italicToolStripMenuItem";
-            this.italicToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.italicToolStripMenuItem.Text = "Italic ";
-            // 
-            // underlineToolStripMenuItem
-            // 
-            this.underlineToolStripMenuItem.Name = "underlineToolStripMenuItem";
-            this.underlineToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.underlineToolStripMenuItem.Text = "Underline";
-            // 
-            // strikeThroughToolStripMenuItem
-            // 
-            this.strikeThroughToolStripMenuItem.Name = "strikeThroughToolStripMenuItem";
-            this.strikeThroughToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.strikeThroughToolStripMenuItem.Text = "Strike Through";
-            // 
-            // normalToolStripMenuItem
-            // 
-            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.normalToolStripMenuItem.Text = "Normal";
-            // 
-            // fontColorToolStripMenuItem
-            // 
-            this.fontColorToolStripMenuItem.Name = "fontColorToolStripMenuItem";
-            this.fontColorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.fontColorToolStripMenuItem.Text = "Font color";
             // 
             // MainNotepadForm
             // 
@@ -301,6 +359,10 @@ namespace Notepad_Clone
         private System.Windows.Forms.ToolStripMenuItem strikeThroughToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem normalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fontColorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
 

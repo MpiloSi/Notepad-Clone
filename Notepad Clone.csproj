@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-Folder-Open.256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-document-save.256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-1-Delete.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-7-Save-as.256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Arrows-Undo.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inipagi-Job-Seeker-Print.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delacro-Id-Fonts.256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gartoon-Team-Gartoon-Misc-Stock-Color.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconoir-Team-Iconoir-Search-font.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Arrows-Redo.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Editing-Bold.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Editing-Italic.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-system-time.256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pictogrammers-Material-Light-Format-underline.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icojam-Blue-Bits-Information.256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
