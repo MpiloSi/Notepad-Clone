@@ -59,6 +59,12 @@ namespace Notepad_Clone
                 cutToolStripMenuItem.Enabled = true;
                 copyToolStripMenuItem.Enabled = true;
                 selectAllToolStripMenuItem.Enabled = true;
+                boldToolStripMenuItem.Enabled = true;
+                italicToolStripMenuItem.Enabled = true;
+                normalToolStripMenuItem.Enabled = true;
+                strikeThroughToolStripMenuItem.Enabled = true;
+                underlineToolStripMenuItem.Enabled = true;
+
             }
             else
             {
@@ -67,6 +73,11 @@ namespace Notepad_Clone
                 undoToolStripMenuItem.Enabled = false;
                 redoToolStripMenuItem.Enabled = false;
                 selectAllToolStripMenuItem.Enabled = false;
+                boldToolStripMenuItem.Enabled = false;
+                italicToolStripMenuItem.Enabled = false;
+                normalToolStripMenuItem.Enabled = false;
+                strikeThroughToolStripMenuItem.Enabled = false;
+                underlineToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -103,6 +114,26 @@ namespace Notepad_Clone
         private void boldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Bold);
+        }
+
+        private void italicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Italic);
+        }
+
+        private void underlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Underline);
+        }
+
+        private void strikeThroughToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Strikeout);
+        }
+
+        private void normalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Regular);
         }
     }
 }

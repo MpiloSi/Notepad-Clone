@@ -173,6 +173,16 @@ namespace Notepad_Clone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Iconsmind_Outline_Normal_Text_512 {
+            get {
+                object obj = ResourceManager.GetObject("Iconsmind-Outline-Normal-Text.512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inipagi_Job_Seeker_Print_512 {
             get {
                 object obj = ResourceManager.GetObject("Inipagi-Job-Seeker-Print.512", resourceCulture);
@@ -206,6 +216,16 @@ namespace Notepad_Clone.Properties {
         internal static System.Drawing.Bitmap Pictogrammers_Material_Light_Format_underline_512 {
             get {
                 object obj = ResourceManager.GetObject("Pictogrammers-Material-Light-Format-underline.512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Saki_NuoveXT_2_Actions_format_text_strikethrough_128 {
+            get {
+                object obj = ResourceManager.GetObject("Saki-NuoveXT-2-Actions-format-text-strikethrough.128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

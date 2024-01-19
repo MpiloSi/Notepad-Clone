@@ -125,5 +125,11 @@
   <ItemGroup>
     <None Include="Resources\Icojam-Blue-Bits-Information.256.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saki-NuoveXT-2-Actions-format-text-strikethrough.128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconsmind-Outline-Normal-Text.512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
