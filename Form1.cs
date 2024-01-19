@@ -19,6 +19,8 @@ namespace Notepad_Clone
 
         private string UFileName;
 
+        public string FindText { get; internal set; }
+
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -100,7 +102,7 @@ namespace Notepad_Clone
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MainRichTextBox.SelectedText = "";
+            MainRichTextBox.SelectedText = " ";
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,6 +146,7 @@ namespace Notepad_Clone
         }
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "all text";
             if(CheckChanges())
             {
                 if(openFileDialog1.ShowDialog()==DialogResult.OK)
@@ -161,6 +164,7 @@ namespace Notepad_Clone
 
         private void SaveAs()
         {
+            openFileDialog1.Filter = "all text";
             if (saveFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 Save(saveFileDialog1.FileName);
@@ -183,6 +187,31 @@ namespace Notepad_Clone
         {
             Find find = new Find();
             find.Show();
+
+            if(FindText != "")
+            {
+                MainRichTextBox.Find(FindText);
+            }
+
+            MessageBox.Show(FindText);
+        }
+
+        private void fontColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            MainRichTextBox.ForeColor = colorDialog1.Color;
+        }
+
+        private void fontDialogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            MainRichTextBox.Font = fontDialog1.Font;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
         }
     }
 }
