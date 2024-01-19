@@ -58,7 +58,7 @@ namespace Notepad_Clone
                 undoToolStripMenuItem.Enabled = true;
                 cutToolStripMenuItem.Enabled = true;
                 copyToolStripMenuItem.Enabled = true;
-
+                selectAllToolStripMenuItem.Enabled = true;
             }
             else
             {
@@ -66,6 +66,7 @@ namespace Notepad_Clone
                 copyToolStripMenuItem.Enabled = false;
                 undoToolStripMenuItem.Enabled = false;
                 redoToolStripMenuItem.Enabled = false;
+                selectAllToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -87,6 +88,21 @@ namespace Notepad_Clone
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainRichTextBox.SelectedText = "";
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.SelectAll();
+        }
+
+        private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.Text += DateTime.Now;
+        }
+
+        private void boldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Bold);
         }
     }
 }
