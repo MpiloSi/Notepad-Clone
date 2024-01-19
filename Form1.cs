@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Notepad_Clone.Logiclayer;
 
 namespace Notepad_Clone
 {
@@ -134,6 +135,17 @@ namespace Notepad_Clone
         private void normalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Regular);
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(CheckChanges())
+            {
+                if(openFileDialog1.ShowDialog()==DialogResult.OK)
+                {
+                    MainRichTextBox.LoadFile(openFileDialog1.FileName);
+                }
+            }
         }
     }
 }
