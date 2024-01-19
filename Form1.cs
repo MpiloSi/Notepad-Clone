@@ -137,6 +137,10 @@ namespace Notepad_Clone
             MainRichTextBox.SelectionFont = new Font(MainRichTextBox.Font, FontStyle.Regular);
         }
 
+        private bool CheckChanges()
+        {
+            return true;
+        }
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(CheckChanges())
