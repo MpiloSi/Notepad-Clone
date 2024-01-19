@@ -36,5 +36,32 @@ namespace Notepad_Clone
         {
             MainRichTextBox.Clear();
         }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.Undo();
+            undoToolStripMenuItem.Enabled = false;
+            redoToolStripMenuItem.Enabled = true;
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainRichTextBox.Redo();
+            undoToolStripMenuItem.Enabled = true;
+            redoToolStripMenuItem.Enabled = false;
+        }
+
+        private void MainRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (MainRichTextBox.Text.Length > 0)
+            {
+                undoToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                undoToolStripMenuItem.Enabled = false;
+                redoToolStripMenuItem.Enabled = false;
+            }
+        }
     }
 }
