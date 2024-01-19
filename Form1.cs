@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Notepad_Clone.Logiclayer;
 
 namespace Notepad_Clone
 {
@@ -17,6 +16,8 @@ namespace Notepad_Clone
         {
             InitializeComponent();
         }
+
+        private string UFileName;
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -149,6 +150,32 @@ namespace Notepad_Clone
                 {
                     MainRichTextBox.LoadFile(openFileDialog1.FileName);
                 }
+            }
+        }
+
+        private void Save(string filename)
+        {
+            UFileName = filename;
+            MainRichTextBox.SaveFile(filename);
+        }
+
+        private void SaveAs()
+        {
+            if (saveFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                Save(saveFileDialog1.FileName);
+            }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(UFileName))
+            {
+                SaveAs();
+            }
+            else
+            {
+                Save(UFileName);
             }
         }
     }
