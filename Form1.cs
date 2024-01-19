@@ -178,5 +178,11 @@ namespace Notepad_Clone
                 Save(UFileName);
             }
         }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Find find = new Find();
+            find.Show();
+        }
     }
 }
