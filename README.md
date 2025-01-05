@@ -1,6 +1,6 @@
 # Notepad Clone
 
-This project is a simple Notepad Clone that allows users to create, edit, and save text files. Built using Python and Tkinter, this application provides a basic text editing experience similar to the original Notepad application found in Windows.
+This project is a simple Notepad Clone that allows users to create, edit, and save text files. Built using C# and WinForm, this application provides a basic text editing experience similar to the original Notepad application found in Windows.
 
 ## Table of Contents
 
